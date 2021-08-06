@@ -27,4 +27,10 @@ view: provider_type {
     type: count
     drill_fields: [provider.provider_id]
   }
+
+  measure: total_providers {
+    type: sum
+    drill_fields: [provider.provider_title, provider_by_type]
+    sql: ${population} ;;
+  }
 }
