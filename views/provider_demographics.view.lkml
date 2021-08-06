@@ -27,4 +27,10 @@ view: provider_demographics {
     type: count
     drill_fields: [provider.provider_id]
   }
+
+  measure: student_demographic_distribution {
+    type: sum
+    drill_fields: [provider.provider_title, demographic_type, student_demographic]
+    sql: ${percentage} ;;
+  }
 }
