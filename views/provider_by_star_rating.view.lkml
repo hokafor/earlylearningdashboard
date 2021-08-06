@@ -23,7 +23,7 @@ view: provider_by_star_rating {
     drill_fields: [provider.provider_id]
   }
 
-  measure: sum {
+  measure: sum_of_ratings {
     type: sum
     drill_fields: [provider.provider_id, provider_by_star_ratings]
   }
