@@ -115,7 +115,7 @@ view: student_information {
               <img src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445> {{ full_name }}
             </p>
           </div>
-        <div>
+        <div style="background-color:blue;color:black;padding:20px;">
           <p>{{ address1 }}</p>
           <p>{{ address2 }}</p>
           <p>{{ phone }}</p>
