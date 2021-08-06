@@ -22,4 +22,9 @@ view: provider_by_star_rating {
     type: count
     drill_fields: [provider.provider_id]
   }
+
+  measure: sum {
+    type: sum
+    drill_fields: [provider.provider_id, provider_by_star_ratings]
+  }
 }
