@@ -34,7 +34,7 @@ view: student_provider_mobility {
 
   dimension: date_value  {
     type: date
-    sql: concat(${year},'-', ${month}, '-', ${day}) ;;
+    sql: date(${year}, ${month}, ${day}) ;;
   }
 
 
