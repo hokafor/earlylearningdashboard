@@ -37,6 +37,10 @@ view: student_provider_mobility {
     sql: date(${year}, ${month}, ${day}) ;;
   }
 
+  measure: provider_ {
+    type: string
+    sql: ${TABLE}.Provider ;;
+  }
 
   measure: count {
     type: count
