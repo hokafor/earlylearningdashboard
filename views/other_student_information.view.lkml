@@ -25,6 +25,6 @@ view: other_student_information {
   measure: total_population {
     type: sum
     drill_fields: [provider.provider_title, other_student_information]
-    sql: ${other_student_information} ;;
+    sql: ${population} ;;
   }
 }
