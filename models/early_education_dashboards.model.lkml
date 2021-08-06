@@ -43,3 +43,19 @@ explore: provider_type {
     relationship: many_to_one
   }
 }
+
+explore: other_student_information {
+  join: provider {
+    type: left_outer
+    sql_on: ${other_student_information.provider_id} = ${provider.provider_id} ;;
+    relationship: many_to_one
+  }
+}
+
+explore: students_by_service {
+  join: provider {
+    type: left_outer
+    sql_on: ${students_by_service.provider_id} = ${provider.provider_id} ;;
+    relationship: many_to_one
+  }
+}
