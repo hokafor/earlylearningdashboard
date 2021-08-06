@@ -106,4 +106,9 @@ view: student_information {
     type: count
     drill_fields: [primary_contact_name, full_name]
   }
+
+  dimension: student_details {
+    type: string
+    html: <p><img src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=300>{{ full_name }}</p> ;;
+  }
 }
