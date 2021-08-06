@@ -59,3 +59,27 @@ explore: students_by_service {
     relationship: many_to_one
   }
 }
+
+explore: student_provider_mobility {
+  join: provider {
+    type: left_outer
+    sql_on: ${student_provider_mobility.provider_id} = ${provider.provider_id} ;;
+    relationship: many_to_one
+  }
+}
+
+explore: student_indicator {
+  join: provider {
+    type: left_outer
+    sql_on: ${student_indicator.provider_id} = ${provider.provider_id} ;;
+    relationship: many_to_one
+  }
+}
+
+explore: student_information {
+  join: provider {
+    type: left_outer
+    sql_on: ${student_information.provider_id} = ${provider.provider_id} ;;
+    relationship: many_to_one
+  }
+}
