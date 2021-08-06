@@ -48,4 +48,9 @@ view: provider {
     type: count
     drill_fields: [provider_id, provider_program_enrollment.count, provider_demographics.count, provider_by_star_rating.count, provider_type.count]
   }
+
+  measure: provider_sum {
+    type: sum
+    drill_fields: [provider_id, provider_program_enrollment.count, provider_demographics.count, provider_by_star_rating.count, provider_type.count]
+  }
 }
