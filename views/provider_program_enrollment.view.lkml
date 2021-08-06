@@ -27,6 +27,6 @@ view: provider_program_enrollment {
   measure: sum_of_children_enrolled {
     type: sum
     sql:  ${population} ;;
-    drill_fields: [provider.provider_id, program_enrollment]
+    drill_fields: [provider.provider_title, program_enrollment]
   }
 }
