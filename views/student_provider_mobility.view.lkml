@@ -8,7 +8,7 @@ view: student_provider_mobility {
   }
 
   dimension: month {
-    type: string
+    type: number
     sql: ${TABLE}.Month ;;
   }
 
