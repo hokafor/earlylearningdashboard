@@ -32,6 +32,12 @@ view: student_provider_mobility {
     sql: ${TABLE}.Year ;;
   }
 
+  dimension: date_value  {
+    type: date
+    sql: date(${year},${month}),${day}) ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: []
