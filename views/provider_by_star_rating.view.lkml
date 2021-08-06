@@ -25,6 +25,7 @@ view: provider_by_star_rating {
 
   measure: sum_of_ratings {
     type: sum
+    sql:  ${population} ;;
     drill_fields: [provider.provider_id, provider_by_star_ratings]
   }
 }
