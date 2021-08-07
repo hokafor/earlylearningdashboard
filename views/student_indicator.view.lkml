@@ -26,9 +26,9 @@ view: student_indicator {
     type: string
     sql: ${TABLE}.Value ;;
     html: {% if value == 'Y' %}
-    <p><img src="http://findicons.com/files/icons/573/must_have/48/check.png" height=20 width=20> {{ rendered_value }}</p>
+    <p><img src="http://findicons.com/files/icons/573/must_have/48/check.png" height=20 width=20></p>
     {% elsif value == 'N' %}
-    <p><img src="http://findicons.com/files/icons/719/crystal_clear_actions/64/cancel.png" height=20 width=20> {{ rendered_value }}</p>
+    <p><img src="http://findicons.com/files/icons/719/crystal_clear_actions/64/cancel.png" height=20 width=20> </p>
     {% else %}
     <p><img src="http://findicons.com/files/icons/1681/siena/128/clock_blue.png" height=20 width=20> {{ rendered_value }}</p>
     {% endif %} ;;
