@@ -133,6 +133,32 @@ view: student_information {
       <h4>                        {{ contact_address2 }}</h4>
       <h4> CellPhone:             {{ contact_cell_phone }}</h4>
       <h4> Email:                 {{ contact_email }}</h4>
+
+      <table style="width:40%">
+        <tr>
+          <th colspan="2"> Guardian / Parent Information </th>
+        </tr>
+        <tr>
+          <td>Name:</td>
+          <td>{{ primary_contact_name }}</td>
+        </tr>
+        <tr>
+          <td>Relation to Student:</td>
+          <td>{{ relationto_student }}</td>
+        </tr>
+        <tr>
+            <td>Relation to Student:</td>
+            <td>{{ relationto_student }}</td>
+          </tr>
+          <tr>
+            <td>Relation to Student:</td>
+            <td>{{ relationto_student }}</td>
+          </tr>
+          <tr>
+            <td>Relation to Student:</td>
+            <td>{{ relationto_student }}</td>
+          </tr>
+      </table>
         ;;
   }
 }
