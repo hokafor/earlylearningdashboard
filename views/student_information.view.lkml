@@ -121,4 +121,24 @@ view: student_information {
         </div>
         ;;
   }
+
+  dimension: student_demographics {
+    type: string
+    sql:  ${full_name} ;;
+    html:
+      <table>
+        <tr>
+          <th colspan="2"> Guardian / Parent Information </th>
+        </tr>
+        <tr>
+          <td>Name:</td>
+          <td>{{ primary_contact_name }}</td>
+        </tr>
+        <tr>
+          <td>Relation to Student:</td>
+          <td>{{ relationto_student }}</td>
+        </tr>
+      </table>
+        ;;
+  }
 }
