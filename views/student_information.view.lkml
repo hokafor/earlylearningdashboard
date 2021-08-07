@@ -110,7 +110,7 @@ view: student_information {
   dimension: student_details {
     type: string
     sql:  ${full_name} ;;
-    html:{
+    html:
        <style>
               .pic{
                   float: left;
@@ -119,7 +119,7 @@ view: student_information {
           </style>
 
           <div>
-              <img class="pic" align="left" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
+              <img class="pic" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
               <h1>{{ full_name }}</h1><hr>
               <h4>{{ address1 }}</h4>
               <h4>{{ address2 }}</h4>
@@ -139,6 +139,6 @@ view: student_information {
         </tr>
       </table>
     </div>
-    }    ;;
+        ;;
   }
 }
