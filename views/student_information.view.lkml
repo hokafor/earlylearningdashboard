@@ -126,25 +126,9 @@ view: student_information {
     type: string
     sql:  ${full_name} ;;
     html:
-      html: <div style="float: left; width:90%; background-color: rgba(0,180,0,90); text-align:left
-
-    ; color: #FFFFFF
-
-    ; border-radius: 5px">
-    <p style="margin-bottom: 0; margin-left: 4px;">90%</p>
-
-    </div>
-
-    <div style="float: left
-
-    ; width: 10%
-
-    ; background-color: rgba(0,180,0,0.1)
-
-    ; text-align:right
-
-    ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>90</p>
-
+      <div style="float: left;">
+        <p style="float: left; width:40%"> Name </p>
+        <p style="margin-left: 4px;">{{ primary_contact_name }}%</p>
     </div>
         ;;
   }
