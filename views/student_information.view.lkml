@@ -110,30 +110,47 @@ view: student_information {
   dimension: student_details {
     type: string
     sql:  ${full_name} ;;
-    html: <style>
-              .pic{
-                  float: left;
-                  margin: 0 30px 0 0;
-              }
-          </style>
-
-          <div>
-              <img class="pic" align="left" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
-              <h1>{{ full_name }}</h1>
-              <h4>{{ address1 }}</h4>
-              <h4>{{ address2 }}</h4>
-              <h4>{{ phone }}</h4>
-          </div>
-
-          <div>
-            <h3> Guardian / Parent Information </h3><hr>
+    html:{
+      <html>
+    <div class="container">
+        <img class="container_image" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" >
+        <div class="container_text">
+            <h1>{{ full_name }}</h1><hr>
+            <h4>{{ address1 }}</h4>
+            <h4>{{ address2 }}</h4>
+            <h4>{{ phone }}</h4> <hr>
+            <h4><b> Guardian / Parent Information </b></h4>
             <h4> Name:                  {{ primary_contact_name }} </h4>
             <h4> Relation to Student:   {{ relationto_student }}</h4>
             <h4> Address:               {{ contact_address1 }}</h4>
             <h4>                        {{ contact_address2 }}</h4>
             <h4> CellPhone:             {{ contact_cell_phone }}</h4>
             <h4> Email:                 {{ contact_email }}</h4>
-          </div>
+        </div>
+      </div>
+
+      <style>
+          body {
+            padding: 50px;
+            }
+
+            .container {
+            padding: 20px 40px 40px;
+            max-width: 800px;
+            display: flex;
+            }
+            .container_image {
+                margin: 20px 30px 0 0;
+                width: 400px;
+                object-fit: contain;
+                align-self: flex-start;
+            }
+            .container_text {
+                flex: 1 1 auto;
+            }
+      </style>
+</html>
+    }
 
     ;;
   }
