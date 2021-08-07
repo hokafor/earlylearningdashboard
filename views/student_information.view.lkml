@@ -111,15 +111,15 @@ view: student_information {
     type: string
     sql:  ${full_name} ;;
     html: <style>
-              .hp{
+              .pic{
                   float: left;
                   margin: 0 30px 0 0;
               }
           </style>
 
           <div>
-              <img float="left" margin="0 30px 0 0" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
-              <h2>{{ full_name }}</h2>
+              <img class="pic" align="left" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
+              <h1>{{ full_name }}</h1>
               <h4>{{ address1 }}</h4>
               <h4>{{ address2 }}</h4>
               <h4>{{ phone }}</h4>
