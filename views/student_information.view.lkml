@@ -112,7 +112,7 @@ view: student_information {
     sql:  ${full_name} ;;
     html:
 
-          <img style="float=left" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
+          <img style="float=left;margin: 0 30px 0 0;" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
           <div style="margin-left:60px;">
             <h1>{{ full_name }}</h1><hr>
             <h4>{{ address1 }}</h4>
@@ -124,20 +124,28 @@ view: student_information {
 
   dimension: student_demographics {
     type: string
+    sql:  ${full_name} ;;
     html:
-      <table>
-        <tr>
-          <th colspan="2"> Guardian / Parent Information </th>
-        </tr>
-        <tr>
-          <td>Name:</td>
-          <td>{{ primary_contact_name }}</td>
-        </tr>
-        <tr>
-          <td>Relation to Student:</td>
-          <td>{{ relationto_student }}</td>
-        </tr>
-      </table>
+      html: <div style="float: left; width:90%; background-color: rgba(0,180,0,90); text-align:left
+
+    ; color: #FFFFFF
+
+    ; border-radius: 5px">
+    <p style="margin-bottom: 0; margin-left: 4px;">90%</p>
+
+    </div>
+
+    <div style="float: left
+
+    ; width: 10%
+
+    ; background-color: rgba(0,180,0,0.1)
+
+    ; text-align:right
+
+    ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>90</p>
+
+    </div>
         ;;
   }
 }
