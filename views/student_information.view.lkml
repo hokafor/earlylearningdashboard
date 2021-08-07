@@ -111,34 +111,20 @@ view: student_information {
     type: string
     sql:  ${full_name} ;;
     html:
-       <style>
-              .pic{
-                  float: left;
-                  margin: 0 30px 0 0;
-              }
-          </style>
-
-          <div>
-              <img  align="left" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
-              <h1>{{ full_name }}</h1><hr>
-              <h4>{{ address1 }}</h4>
-              <h4>{{ address2 }}</h4>
-              <h4>{{ phone }}</h4>
-
-      <table>
-        <tr>
-        <th colspan="2"><h4> Guardian / Parent Information </h4></th>
-        </tr>
-        <tr>
-        <td><h4>Name:</h4></td>
-        <td><h4>{{ primary_contact_name }}</h4></td>
-        </tr>
-        <tr>
-        <td><h4>Relation to Student:</h4></td>
-        <td><h4>{{ relationto_student }}</h4></td>
-        </tr>
-      </table>
-    </div>
+        <div>
+            <img align="left" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
+            <h1>{{ full_name }}</h1><hr>
+            <h4>{{ address1 }}</h4>
+            <h4>{{ address2 }}</h4>
+            <h4>{{ phone }}</h4><hr>
+            <h4><b> Guardian / Parent Information </b></h4>
+            <h4> Name:                  {{ primary_contact_name }} </h4>
+            <h4> Relation to Student:   {{ relationto_student }}</h4>
+            <h4> Address:               {{ contact_address1 }}</h4>
+            <h4>                        {{ contact_address2 }}</h4>
+            <h4> CellPhone:             {{ contact_cell_phone }}</h4>
+            <h4> Email:                 {{ contact_email }}</h4>
+        </div>
         ;;
   }
 }
