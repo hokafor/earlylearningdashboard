@@ -124,7 +124,6 @@ view: student_information {
 
   dimension: student_demographics {
     type: string
-    sql:  ${full_name} ;;
     html:
       <table>
         <tr>
