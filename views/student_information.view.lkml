@@ -117,7 +117,7 @@ view: student_information {
             <h1>{{ full_name }}</h1><hr>
             <h4>{{ address1 }}</h4>
             <h4>{{ address2 }}</h4>
-            <h4>{{ phone }}</h4><hr>
+            <h4>{{ phone }}</h4>
         </div>
         ;;
   }
@@ -126,10 +126,13 @@ view: student_information {
     type: string
     sql:  ${full_name} ;;
     html:
-      <div style="float: left;">
-        <p style="float: left; width:40%"> Name </p>
-        <p style="margin-left: 4px;">{{ primary_contact_name }}%</p>
-    </div>
+      <h4><b> Guardian / Parent Information </b></h4>
+      <h4> Name:                  {{ primary_contact_name }} </h4>
+      <h4> Relation to Student:   {{ relationto_student }}</h4>
+      <h4> Address:               {{ contact_address1 }}</h4>
+      <h4>                        {{ contact_address2 }}</h4>
+      <h4> CellPhone:             {{ contact_cell_phone }}</h4>
+      <h4> Email:                 {{ contact_email }}</h4>
         ;;
   }
 }
