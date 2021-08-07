@@ -118,7 +118,7 @@ view: student_information {
           </style>
 
           <div>
-              <img class="hp" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
+              <img float="left" margin="0 30px 0 0" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
               <h2>{{ full_name }}</h2>
               <h4>{{ address1 }}</h4>
               <h4>{{ address2 }}</h4>
