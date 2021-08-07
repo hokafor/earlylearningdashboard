@@ -83,3 +83,11 @@ explore: student_information {
     relationship: many_to_one
   }
 }
+
+explore: student_early_childhood_data {
+  join: provider {
+    type: left_outer
+    sql_on: ${student_early_childhood_data.provider_id} = ${provider.provider_id} ;;
+    relationship: many_to_one
+  }
+}
