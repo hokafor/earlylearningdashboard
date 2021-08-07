@@ -125,6 +125,16 @@ view: student_information {
               <h4>{{ phone }}</h4>
           </div>
 
+          <div>
+            <h3> Guardian / Parent Information </h3><hr>
+            <h4> Name:                  {{ primary_contact_name }} </h4>
+            <h4> Relation to Student:   {{ relationto_student }}</h4>
+            <h4> Address:               {{ contact_address1 }}</h4>
+            <h4>                        {{ contact_address2 }}</h4>
+            <h4> CellPhone:             {{ contact_cell_phone }}</h4>
+            <h4> Email:                 {{ contact_email }}</h4>
+          </div>
+
     ;;
   }
 }
