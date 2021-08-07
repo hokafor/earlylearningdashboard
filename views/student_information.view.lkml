@@ -123,19 +123,19 @@ view: student_information {
               <h1>{{ full_name }}</h1><hr>
               <h4>{{ address1 }}</h4>
               <h4>{{ address2 }}</h4>
-              <h4>{{ phone }}</h4><hr>
+              <h4>{{ phone }}</h4>
 
-      <table style="width:100%">
+      <table>
         <tr>
-        <th colspan="2"> Guardian / Parent Information </th>
+        <th colspan="2"><h4> Guardian / Parent Information </h4></th>
         </tr>
         <tr>
-        <td>Name:</td>
-        <td>{{ primary_contact_name }}</td>
+        <td><h4>Name:</h4></td>
+        <td><h4>{{ primary_contact_name }}</h4></td>
         </tr>
         <tr>
-        <td>Relation to Student:</td>
-        <td>{{ relationto_student }}</td>
+        <td><h4>Relation to Student:</h4></td>
+        <td><h4>{{ relationto_student }}</h4></td>
         </tr>
       </table>
     </div>
