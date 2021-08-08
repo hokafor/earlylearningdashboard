@@ -91,3 +91,11 @@ explore: student_early_childhood_data {
     relationship: many_to_one
   }
 }
+
+explore: provider_program_statistics {
+  join: provider {
+    type: left_outer
+    sql_on: ${provider_program_statistics.provider_id} = ${provider.provider_id} ;;
+    relationship: many_to_one
+  }
+}
