@@ -68,7 +68,7 @@ view: provider_program_statistics {
   }
 
   measure: percent_complete {
-    type: number
+    type: sum
     sql: ${metric_value};;
     html: <div style="float:left;width:{{ value }}%; background-color: rgba(0,180,0,{{ value }})
 
