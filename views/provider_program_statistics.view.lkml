@@ -81,17 +81,7 @@ view: provider_program_statistics {
 
                 </div>
 
-                <div style="float: left
 
-                ; width:{{ 100| minus:value }}%
-
-                ; background-color: rgba(0,180,0,0.1)
-
-                ; text-align:right
-
-                ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>{{rendered_value}}</p>
-
-                </div>
 
             ;;
 
