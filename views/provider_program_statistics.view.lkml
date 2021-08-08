@@ -70,13 +70,14 @@ view: provider_program_statistics {
   measure: percent_complete {
     type: sum
     sql: ${metric_value};;
+    value_format: "0.0\%"
     html: <div style="float:left;width:{{ value }}%; background-color: rgba(0,180,0,{{ value }})
 
                 ; text-align:left
 
                 ; color: #FFFFFF
 
-                ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 4px;">{{ value }}%</p>
+                ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 4px;">{{ rendered_value }}%</p>
 
                 </div>
 
@@ -88,7 +89,7 @@ view: provider_program_statistics {
 
                 ; text-align:right
 
-                ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>{{value}}</p>
+                ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>{{rendered_value}}</p>
 
                 </div>
 
