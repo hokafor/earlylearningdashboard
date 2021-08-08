@@ -37,8 +37,8 @@ view: provider_program_statistics {
     type: number
     sql: ${attainment_numerator} * 100 / ${attainment_denominator} ;;
     value_format: "0.0\%"
-    html: {% assign var = difference_from_goal %}
-    {% if var >= 0.0 %}
+    html:
+    {% if difference_from_goal._value >= 0.0 %}
     <p style="color: black; background-color: green; font-size:100%; text-align:center">{{ rendered_value }}</p>
     {% else %}
     <p style="color: black; background-color: red; font-size:100%; text-align:center">{{ rendered_value }}</p>
