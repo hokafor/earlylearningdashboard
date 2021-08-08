@@ -71,29 +71,18 @@ view: provider_program_statistics {
     type: sum
     sql:  ${attainment_numerator} * 100 / ${attainment_denominator} ;;
     value_format: "0.0\%"
-    html: <div style="float:left;width:{{ value }}%; background-color: rgba(0,180,0,{{ value }})
-
-                ; text-align:left
-
-                ; color: #FFFFFF
-
-                ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 4px;">{{ rendered_value }}%</p>
-
-                </div>
-
-                <div style="float: left
-
-                ; width:{{ 100| minus:value }}%
-
-                ; background-color: rgba(0,180,0,0.1)
-
-                ; text-align:right
-
-                ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>{{rendered_value}}</p>
-
-                </div>
-
-            ;;
+    html:
+    {% if difference_from_goal._value >= 0.0 %}
+    <div style="float:left;width:{{ value }}%; background-color: rgba(0,180,0,{{ value }}); text-align:left; color: #FFFFFF;
+              border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 4px;">{{ rendered_value }}</p></div>
+    <div style="float: left; width:{{ 100| minus:value }}%; background-color: rgba(0,180,0,0.1); text-align:right;
+              border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>{{rendered_value}}</p></div>
+    {% else %}
+    <div style="float:left;width:{{ value }}%; background-color: rgba(0,180,0,{{ value }}); text-align:left; color: #FFFFFF;
+              border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 4px;">{{ rendered_value }}</p></div>
+    <div style="float: left; width:{{ 100| minus:value }}%; background-color: rgba(180,0,0,0.1); text-align:right;
+              border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>{{rendered_value}}</p></div>
+    {% endif %} ;;
 
     }
 }
