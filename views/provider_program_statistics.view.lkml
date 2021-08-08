@@ -69,7 +69,7 @@ view: provider_program_statistics {
 
   measure: percent_complete {
     type: sum
-    sql: ${metric_value};;
+    sql:  ${attainment_numerator} * 100 / ${attainment_denominator} ;;
     value_format: "0.0\%"
     html: <div style="float:left;width:{{ value }}%; background-color: rgba(0,180,0,{{ value }})
 
@@ -81,7 +81,17 @@ view: provider_program_statistics {
 
                 </div>
 
+                <div style="float: left
 
+                ; width:{{ 100| minus:value }}%
+
+                ; background-color: rgba(0,180,0,0.1)
+
+                ; text-align:right
+
+                ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>{{rendered_value}}</p>
+
+                </div>
 
             ;;
 
