@@ -44,6 +44,7 @@ view: provider_program_statistics {
     <p style="color: black; background-color: red; font-size:100%; text-align:center">{{ rendered_value }}</p>
     {% endif %} ;;
   }
+
   dimension: difference_from_goal {
     type: number
     sql: ${metric_value} - ${program_goal} ;;
@@ -65,4 +66,33 @@ view: provider_program_statistics {
     type: count
     drill_fields: []
   }
+
+  measure: percent_complete {
+    type: number
+    sql: ${metric_value};;
+    html: <div style="float:left;width:{{ value }}%; background-color: rgba(0,180,0,{{ value }})
+
+                ; text-align:left
+
+                ; color: #FFFFFF
+
+                ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 4px;">{{ value }}%</p>
+
+                </div>
+
+                <div style="float: left
+
+                ; width:{{ 100| minus:value }}%
+
+                ; background-color: rgba(0,180,0,0.1)
+
+                ; text-align:right
+
+                ; border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>{{value}}</p>
+
+                </div>
+
+            ;;
+
+    }
 }
