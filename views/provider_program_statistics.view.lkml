@@ -78,7 +78,7 @@ view: provider_program_statistics {
     <div style="float: left; width:{{ 100| minus:value }}%; background-color: rgba(0,180,0,0.1); text-align:right;
               border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>{{rendered_value}}</p></div>
     {% else %}
-    <div style="float:left;width:{{ value }}%; background-color: rgba(0,180,0,{{ value }}); text-align:left; color: #FFFFFF;
+    <div style="float:left;width:{{ value }}%; background-color: rgba(180,0,0,{{ value }}); text-align:left; color: #FFFFFF;
               border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 4px;">{{ rendered_value }}</p></div>
     <div style="float: left; width:{{ 100| minus:value }}%; background-color: rgba(180,0,0,0.1); text-align:right;
               border-radius: 5px"> <p style="margin-bottom: 0; margin-left: 0px; color:rgba(0,0,0,0.0" )>{{rendered_value}}</p></div>
