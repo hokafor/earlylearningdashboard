@@ -33,17 +33,22 @@ view: provider_program_statistics {
     sql: ${TABLE}.ProviderID ;;
   }
 
-  dimension: difference_from_goal {
-    type: number
-    sql: (${attainment_numerator} * 100 / ${attainment_denominator}) - ${program_goal} ;;
-    value_format: "0.0\%"
-  }
-
   dimension: metric_value {
     type: number
     sql: ${attainment_numerator} * 100 / ${attainment_denominator} ;;
     value_format: "0.0\%"
   }
+  dimension: difference_from_goal {
+    type: number
+    sql: ${metric_value} - ${program_goal} ;;
+    value_format: "0.0\%"
+    html: {% if value >= 0.0 %}
+    <p style="color: green; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: red; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% endif %} ;;
+  }
+
 
   dimension: teacher_attainment {
     type: string
