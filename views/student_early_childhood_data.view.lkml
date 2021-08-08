@@ -54,7 +54,15 @@ view: student_early_childhood_data {
 
   dimension: star_rating {
     type: string
-    sql: ${TABLE}.StarRating ;;
+    sql:CAST(${TABLE}.StarRating AS INT) ;;
+        html:
+        {% for i in (1..5) %}
+        {% if i > value %}
+           <font color="gray">★</font>
+        {% else %}
+          <font color="orange">★</font>
+        {% endif %}
+        {% endfor %} ;;
   }
 
   dimension: student_id {
