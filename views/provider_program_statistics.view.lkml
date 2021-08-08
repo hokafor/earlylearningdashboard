@@ -35,8 +35,13 @@ view: provider_program_statistics {
 
   dimension: metric_value {
     type: number
-    sql: ${attainment_numerator} / ${attainment_denominator} ;;
+    sql: ${attainment_numerator} * 100 / ${attainment_denominator} ;;
     value_format: "0.0\%"
+    html: {% if difference_from_goal > 0 %}
+    <p style="color: black; background-color: green; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; background-color: red; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% endif %} ;;
   }
 
   dimension: difference_from_goal {
