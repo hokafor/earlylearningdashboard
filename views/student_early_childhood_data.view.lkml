@@ -13,12 +13,12 @@ view: student_early_childhood_data {
   }
 
   dimension: entry {
-    type: string
+    type: date
     sql: ${TABLE}.Entry ;;
   }
 
   dimension: exit {
-    type: string
+    type: date
     sql: ${TABLE}.Exit ;;
   }
 
@@ -27,10 +27,8 @@ view: student_early_childhood_data {
     sql: ${TABLE}.IsCurrent ;;
     html: {% if value == 'Y' %}
     <p><img src="http://findicons.com/files/icons/573/must_have/48/check.png" height=20 width=20></p>
-    {% elsif value == 'N' %}
-    <p><img src="https://findicons.com/files/icons/977/rrze/48/temporarily_not_available_alternative.png" height=20 width=20> </p>
     {% else %}
-    <p><img src="http://findicons.com/files/icons/1681/siena/128/clock_blue.png" height=20 width=20> {{ rendered_value }}</p>
+    <p><img src="https://findicons.com/files/icons/2711/free_icons_for_windows8_metro/128/unchecked_checkbox.png" height=20 width=20> {{ rendered_value }}</p>
     {% endif %} ;;
   }
 
