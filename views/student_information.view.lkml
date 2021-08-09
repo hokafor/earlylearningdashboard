@@ -112,7 +112,7 @@ view: student_information {
     sql:  ${full_name} ;;
     html:
 
-          <img style="float=left;margin: 0 30px 0 50;" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
+          <img style="float=left;margin: 0 30px 0 50px;" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
           <div style="margin-left:20px; text-align:left">
             <h1>{{ full_name }}</h1><hr>
             <h4>{{ address1 }}</h4>
@@ -126,13 +126,13 @@ view: student_information {
     type: string
     sql:  ${full_name} ;;
     html:
-      <h4><b> Guardian / Parent Information </b></h4>
-      <h4> Name:                  {{ primary_contact_name }} </h4>
-      <h4> Relation to Student:   {{ relationto_student }}</h4>
-      <h4> Address:               {{ contact_address1 }}</h4>
-      <h4>                        {{ contact_address2 }}</h4>
-      <h4> CellPhone:             {{ contact_cell_phone }}</h4>
-      <h4> Email:                 {{ contact_email }}</h4>
+      <h4><b> Guardian / Parent Information </b></h4></br></br>
+      <h4><b> Name:</b> {{ primary_contact_name }} </h4></br> </br>
+      <h4><b>Relation to Student:</b></br> {{ relationto_student }}</h4></br> </br>
+      <h4><b>Address:</b></br> {{ contact_address1 }}</h4></br>
+      <h4>{{ contact_address2 }}</h4></br></br>
+      <h4><b>CellPhone:</b></br> {{ contact_cell_phone }}</h4></br></br>
+      <h4><b>Email:</b></br> {{ contact_email }}</h4></br>
         ;;
   }
 }
