@@ -49,7 +49,7 @@ view: provider {
     sql:  ${provider_title} ;;
     html:
 
-          <img style="float=left;margin: 0 0 20 20;" src="https://https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Boys_%26_Girls_Clubs_of_America_%28logo%29.svg/1200px-Boys_%26_Girls_Clubs_of_America_%28logo%29.svg.png" height=70 width=60>
+          <img style="align=left;margin: 0 0 20 20;" src="https://garfield.cr.k12.ia.us/assets/6/18/Boys_and_Girls_Club_Logo.jpeg" height=100 width=80>
           <div style="margin-left:20px;color:blue;">
             <h1><b>{{rendered_value}}</b></h1><hr>
             <h4>{{ provider_address1 }}</h4>
