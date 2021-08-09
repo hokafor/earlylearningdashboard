@@ -112,7 +112,7 @@ view: student_information {
     sql:  ${full_name} ;;
     html:
 
-          <img style="float=left;margin: 0 30px 0 50px;" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
+          <img style="float=left;margin: 0 0 20 20;" src="https://fosteradoption.com/wp-content/uploads/2018/06/5-Things-You-Should-Know-about-Older-Child-Adoption-667x445.jpg" height=300 width=445>
           <div style="margin-left:20px; text-align:left">
             <h1>{{ full_name }}</h1><hr>
             <h4>{{ address1 }}</h4>
