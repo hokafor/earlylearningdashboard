@@ -13,12 +13,12 @@ view: student_early_childhood_data {
   }
 
   dimension: entry {
-    type: date
+    type: string
     sql: PARSE_DATE('%m/%d/%Y', ${TABLE}.Entry) ;;
   }
 
   dimension: exit {
-    type: date
+    type: string
     sql: PARSE_DATE('%m/%d/%Y', ${TABLE}.Exit) ;;
   }
 
