@@ -32,5 +32,6 @@ view: provider_demographics {
     type: sum
     drill_fields: [provider.provider_title, demographic_type, student_demographic]
     sql: ${percentage} ;;
+    value_format: "0.0\%"
   }
 }
