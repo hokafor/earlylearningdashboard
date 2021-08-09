@@ -20,7 +20,7 @@ view: provider_type {
 
   dimension: provider_sub_type {
     type: string
-    sql: ${TABLE}.DemographicType ;;
+    sql: ${TABLE}.ProviderSubType ;;
   }
 
   measure: count {
