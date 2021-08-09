@@ -65,9 +65,9 @@ view: student_early_childhood_data {
         html:
         {% for i in (1..5) %}
         {% if i > value %}
-           <font color="light gray" size="+4">★</font>
+           <font color="light gray" size="+2">★</font>
         {% else %}
-          <font color="orange" size="+4">★</font>
+          <font color="orange" size="+2">★</font>
         {% endif %}
         {% endfor %} ;;
   }
