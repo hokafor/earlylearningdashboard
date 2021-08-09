@@ -28,7 +28,7 @@ view: student_indicator {
     html: {% if value == 'Y' %}
     <p><img src="http://findicons.com/files/icons/573/must_have/48/check.png" height=20 width=20></p>
     {% elsif value == 'N' %}
-    <p><img src="http://findicons.com/files/icons/719/crystal_clear_actions/64/cancel.png" height=20 width=20> </p>
+    <p><img src="https://findicons.com/files/icons/2711/free_icons_for_windows8_metro/128/unchecked_checkbox.png" height=20 width=20> </p>
     {% else %}
     {{ rendered_value }}
     {% endif %} ;;
