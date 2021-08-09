@@ -25,6 +25,13 @@ view: student_early_childhood_data {
   dimension: is_current {
     type: string
     sql: ${TABLE}.IsCurrent ;;
+    html: {% if value == 'Y' %}
+    <p><img src="http://findicons.com/files/icons/573/must_have/48/check.png" height=20 width=20></p>
+    {% elsif value == 'N' %}
+    <p><img src="http://findicons.com/files/icons/719/crystal_clear_actions/64/cancel.png" height=20 width=20> </p>
+    {% else %}
+    <p><img src="http://findicons.com/files/icons/1681/siena/128/clock_blue.png" height=20 width=20> {{ rendered_value }}</p>
+    {% endif %} ;;
   }
 
   dimension: lengthof_disruption {
@@ -58,9 +65,9 @@ view: student_early_childhood_data {
         html:
         {% for i in (1..5) %}
         {% if i > value %}
-           <font color="gray">★</font>
+           <font color="light gray" size="+4">★</font>
         {% else %}
-          <font color="orange">★</font>
+          <font color="orange" size="+4">★</font>
         {% endif %}
         {% endfor %} ;;
   }
