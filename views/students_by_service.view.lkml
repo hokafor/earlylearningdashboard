@@ -26,5 +26,6 @@ view: students_by_service {
     type: sum
     drill_fields: [provider.provider_title, students_by_service]
     sql: ${population} ;;
+    value_format: "0.0\%"
   }
 }
