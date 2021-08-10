@@ -85,6 +85,7 @@ view: provider {
   dimension: provider_details {
     type: string
     sql:  ${provider_title} ;;
+    drill_fields: [provider_title]
     html:
       <a href="#drillmenu" target="_self">
       <img style="align=left;margin: 0 0 20 10;" src="https://garfield.cr.k12.ia.us/assets/6/18/Boys_and_Girls_Club_Logo.jpeg" width=200>
