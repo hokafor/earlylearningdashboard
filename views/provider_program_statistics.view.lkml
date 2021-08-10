@@ -18,7 +18,7 @@ view: provider_program_statistics {
     action: {
 
       url: "https://hooks.zapier.com/hooks/catch/5505451/oih24lt"
-      label: "Schedule Follow Up With District Superintendent"
+      label: "Schedule Follow Up With Provider"
       icon_url: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"
       form_param: {
         name: "Event Start Time"

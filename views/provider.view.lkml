@@ -32,44 +32,6 @@ view: provider {
   dimension: provider_title {
     type: string
     sql: ${TABLE}.ProviderTitle ;;
-    link: {
-      label: "{{ value }} Overview Dashboard"
-      icon_url: "https://looker.com/assets/img/images/logos/looker_grey.svg"
-    }
-    action: {
-
-      url: "https://hooks.zapier.com/hooks/catch/5505451/oih24lt"
-      label: "Schedule Follow Up With District Superintendent"
-      icon_url: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"
-      form_param: {
-        name: "Event Start Time"
-        default: "{{ 'now' | date: '%s' | plus: 86400 | date: '%Y-%m-%d %H:00' }}"
-        required: yes
-      }
-      form_param: {
-        name: "Event End Time"
-        default: "{{ 'now' | date: '%s' | plus: 86400 | date: '%Y-%m-%d %H:30' }}"
-        required: yes
-      }
-      form_param: {
-        name: "Organizer Email"
-        required: yes
-        default: "{{ _user_attributes['email'] }}"
-      }
-
-      form_param: {
-        name: "Calendar Event Name"
-        default: "{{ value }} Assessment KPIs"
-        required: yes
-      }
-      form_param: {
-        name: "Calendar Event Description"
-        default: "Hi  - I'm setting up some time for us to review the assessment analytics KPIs we are monitoring and figure out how to improve participation and utilization across the district"
-        required: no
-        type: textarea
-      }
-
-    }
   }
 
   dimension: star_rating {
