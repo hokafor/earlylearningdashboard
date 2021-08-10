@@ -15,6 +15,40 @@ view: provider_program_statistics {
   dimension: group {
     type: string
     sql: ${TABLE}.`Group` ;;
+    action: {
+
+      url: "https://hooks.zapier.com/hooks/catch/5505451/oih24lt"
+      label: "Schedule Follow Up With District Superintendent"
+      icon_url: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"
+      form_param: {
+        name: "Event Start Time"
+        default: "{{ 'now' | date: '%s' | plus: 86400 | date: '%Y-%m-%d %H:00' }}"
+        required: yes
+      }
+      form_param: {
+        name: "Event End Time"
+        default: "{{ 'now' | date: '%s' | plus: 86400 | date: '%Y-%m-%d %H:30' }}"
+        required: yes
+      }
+      form_param: {
+        name: "Organizer Email"
+        required: yes
+        default: "{{ _user_attributes['email'] }}"
+      }
+
+      form_param: {
+        name: "Calendar Event Name"
+        default: "{{ value }} Assessment KPIs"
+        required: yes
+      }
+      form_param: {
+        name: "Calendar Event Description"
+        default: "Hi  - I'm setting up some time for us to review the assessment analytics KPIs we are monitoring and figure out how to improve participation and utilization across the district"
+        required: no
+        type: textarea
+      }
+
+    }
   }
 
   dimension: operational_dashboard_group {
@@ -70,6 +104,7 @@ view: provider_program_statistics {
   measure: percent_complete {
     type: sum
     sql:  ${attainment_numerator} * 100 / ${attainment_denominator} ;;
+    drill_fields: [group]
     value_format: "0.0\%"
     html:
     {% if difference_from_goal._value >= 0.0 %}
