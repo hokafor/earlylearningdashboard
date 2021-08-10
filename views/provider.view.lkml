@@ -60,6 +60,10 @@ view: provider {
             <h4><b>Date Rating Received: </b>August 12, 2020</h4>
         </div>
         ;;
+      link: {
+        label: "{{ value }} Overview Dashboard"
+        icon_url: "https://looker.com/assets/img/images/logos/looker_grey.svg"
+      }
       action: {
 
         url: "https://hooks.zapier.com/hooks/catch/5505451/oih24lt"
