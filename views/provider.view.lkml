@@ -86,17 +86,17 @@ view: provider {
     type: string
     sql:  ${provider_title} ;;
     html:
-
-          <img style="align=left;margin: 0 0 20 10;" src="https://garfield.cr.k12.ia.us/assets/6/18/Boys_and_Girls_Club_Logo.jpeg" width=200>
-          <div style="margin-left:20px;color:rgb(89,56,55);">
-            <h1><b>{{rendered_value}}</b></h1><hr>
-            <h4>{{ provider_address1 }}</h4>
-            <h4>{{ provider_address2 }}</h4>
-            <h4>{{ provider_phone }}</h4><hr>
-            <h4><b>Program Director: </b>{{ program_director }}</h4>
-            <h4><b>Star Rating: </b>{{ star_rating }}</h4>
-            <h4><b>Date Rating Received: </b>August 12, 2020</h4>
-        </div>
+      <a href="#drillmenu" target="_self">
+      <img style="align=left;margin: 0 0 20 10;" src="https://garfield.cr.k12.ia.us/assets/6/18/Boys_and_Girls_Club_Logo.jpeg" width=200>
+      <div style="margin-left:20px;color:rgb(89,56,55);">
+        <h1><b>{{rendered_value}}</b></h1><hr>
+        <h4>{{ provider_address1 }}</h4>
+        <h4>{{ provider_address2 }}</h4>
+        <h4>{{ provider_phone }}</h4><hr>
+        <h4><b>Program Director: </b>{{ program_director }}</h4>
+        <h4><b>Star Rating: </b>{{ star_rating }}</h4>
+        <h4><b>Date Rating Received: </b>August 12, 2020</h4>
+    </div>
         ;;
   }
 
